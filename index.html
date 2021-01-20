@@ -9,26 +9,29 @@
 </head>
 
 <body>
-    <h1>Tax calculator</h1>
-    <form class="form-group" action="javascript:displayLiability()">
+    <h1 style="text-align: center;">Tax calculator</h1>
+    <form action="javascript:displayLiability()">
         <table class="table">
-            <tr>
-                <td>
-                    <label for="income">Input your gross annual income:</label>
-                </td>
-                <td>
-                    <input required id="income" type="number" name="income" step="any" min="0" />
-                    <input type="submit" class="btn-primary" value="Calculate" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="taxable-amount">Your tax liability is: </label>
-                </td>
-                <td>
-                    <input id="taxable-amount" name="taxable-amount" />
-                </td>
-            </tr>    
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="income">Input your gross annual income:</label>
+                    </td>
+                    <td>
+                        <input required id="income" type="number" name="income" step="any" min="0" />
+                        <input type="submit" class="btn-primary" value="Calculate" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="taxable-amount">Your tax liability is: </label>
+                    </td>
+                    <td>
+                        <input id="taxable-amount" name="taxable-amount" />
+                    </td>
+                </tr>
+
+            </tbody>
         </table>
     </form>
 </body>
