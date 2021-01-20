@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>Tax table</title>
-    </head>
-    <body>
-        <h1>Tax calculator</h1>
-        <form action="javascript:debug()">
-            <label for="income">Input your gross annual income:</label>
-            <input required id="income" type="number" name="income" step="any" min="0" />
-            <input type="submit" value="Calculate" />
-            <label for="taxable-amount">Your tax liability is: </label>
-            <input id="taxable-amount" name="taxable-amount" />
-        </form>
-    </body>
-        <script src="liability.js"></script>
-</html>
 
+<head>
+    <meta charset="UTF-8" />
+    <title>Tax table</title>
+</head>
+
+<body>
+    <h1>Tax calculator</h1>
+    <form action="javascript:displayLiability()">
+        <label for="income">Input your gross annual income:</label>
+        <input required id="income" type="number" name="income" step="any" min="0" />
+        <input type="submit" value="Calculate" />
+        <label for="taxable-amount">Your tax liability is: </label>
+        <input id="taxable-amount" name="taxable-amount" />
+    </form>
+</body>
+<script src="liability.js"></script>
+
+</html>

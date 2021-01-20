@@ -10,16 +10,16 @@ function displayLiability() {
     if (lowestBracket(income)){
         display(lowestLiability(income));
     }
-    if (bracketTwo(income)){
+    else if (bracketTwo(income)){
         display(bracketTwoLiability(income));
     }
-    if (bracketThree(income)){
+    else if (bracketThree(income)){
         display(bracketThreeLiability(income));
     }
-    if (bracketFour(income)){
+    else if (bracketFour(income)){
         display(bracketFourLiability(income));
     }
-    if (bracketFive(income)){
+    else if (bracketFive(income)){
         display(bracketFiveLiability(income));
     }            
 }
