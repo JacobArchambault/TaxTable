@@ -1,10 +1,3 @@
-function debug(){
-    let income = document.getElementById("income").value;
-    if (lowestBracket(income)){
-        display(lowestLiability(income));
-    }
-
-}
 function displayLiability() {
     let income = document.getElementById("income").value;
     if (lowestBracket(income)){
