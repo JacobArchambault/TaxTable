@@ -6,7 +6,7 @@
     </head>
     <body>
         <h1>Tax calculator</h1>
-        <form action="javascript:printIncome()">
+        <form action="javascript:displayLiability()">
             <label for="income">Input your gross annual income:</label>
             <input required id="income" type="number" name="income" step="any" min="0" />
             <input type="submit" value="Calculate" />
@@ -15,9 +15,23 @@
         </form>
     </body>
     <script>
-        function printIncome() {
+        function displayLiability() {
             let income = document.getElementById("income").value;
-            document.getElementById("taxable-amount").value = income;
+            if (lowestBracket(income)){
+            	display(lowestLiability(income));
+            }
+            if (bracketTwo(income)){
+            	display(bracketTwoLiability(income));
+            }
+            if (bracketThree(income)){
+            	display(bracketThreeLiability(income));
+            }
+            if (bracketFour(income)){
+            	display(bracketFourLiability(income));
+            }
+            if (bracketFive(income)){
+            	display(bracketFiveLiability(income));
+            }            
         }
         function isBetween(number, lowValue, highValue) {
             return number >= lowValue && number < highvalue;
@@ -52,6 +66,10 @@
         function bracketFiveLiability(gross) {
             return 93374 + (gross - 297350) * 0.391;
         }
+        function display(number){
+            document.getElementById("taxable-amount").value = number;        
+        }
+
     </script>
 </html>
 
