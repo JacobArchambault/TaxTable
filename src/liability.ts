@@ -1,20 +1,20 @@
 function displayLiability() {
     let income = document.getElementById("income")["value"];
-    if (lowestBracket(income)){
+    if (lowestBracket(income)) {
         display(asCurrency(lowestLiability(income)));
     }
-    else if (bracketTwo(income)){
+    else if (bracketTwo(income)) {
         display(asCurrency(bracketTwoLiability(income)));
     }
-    else if (bracketThree(income)){
+    else if (bracketThree(income)) {
         display(asCurrency(bracketThreeLiability(income)));
     }
-    else if (bracketFour(income)){
+    else if (bracketFour(income)) {
         display(asCurrency(bracketFourLiability(income)));
     }
-    else if (bracketFive(income)){
+    else if (bracketFive(income)) {
         display(asCurrency(bracketFiveLiability(income)));
-    }            
+    }
 }
 function isBetween(number: number, lowValue: number, highValue: number) {
     return number >= lowValue && number < highValue;
@@ -49,11 +49,12 @@ function bracketFourLiability(gross: number) {
 function bracketFiveLiability(gross: number) {
     return 93374 + (gross - 297350) * 0.391;
 }
-function display(displayValue: string){
-    document.getElementById("taxable-amount")["value"] = displayValue;        
+function display(displayValue: string) {
+    document.getElementById("taxable-amount")["value"] = displayValue;
 }
-function asCurrency(number: number){
+function asCurrency(number: number) {
     return new Intl.NumberFormat('en-US', {
         style: 'currency',
-        currency: 'USD'}).format(number);
+        currency: 'USD'
+    }).format(number);
 }
