@@ -49,8 +49,8 @@ function bracketFourLiability(gross) {
 function bracketFiveLiability(gross) {
     return 93374 + (gross - 297350) * 0.391;
 }
-function display(number) {
-    document.getElementById("taxable-amount")["value"] = number;
+function display(displayValue) {
+    document.getElementById("taxable-amount")["value"] = displayValue;
 }
 function asCurrency(number) {
     return new Intl.NumberFormat('en-US', {

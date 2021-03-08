@@ -19,16 +19,16 @@ function displayLiability() {
 function isBetween(number: number, lowValue: number, highValue: number) {
     return number >= lowValue && number < highValue;
 }
-function lowestBracket(number: any) {
+function lowestBracket(number: number) {
     return isBetween(number, 0, 27050);
 }
-function bracketTwo(number: any) {
+function bracketTwo(number: number) {
     return isBetween(number, 27050, 65550);
 }
-function bracketThree(number: any) {
+function bracketThree(number: number) {
     return isBetween(number, 65550, 136750);
 }
-function bracketFour(number: any) {
+function bracketFour(number: number) {
     return isBetween(number, 136750, 297350);
 }
 function bracketFive(number: number) {
@@ -49,10 +49,10 @@ function bracketFourLiability(gross: number) {
 function bracketFiveLiability(gross: number) {
     return 93374 + (gross - 297350) * 0.391;
 }
-function display(number: string){
-    document.getElementById("taxable-amount")["value"] = number;        
+function display(displayValue: string){
+    document.getElementById("taxable-amount")["value"] = displayValue;        
 }
-function asCurrency(number: number | bigint){
+function asCurrency(number: number){
     return new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'USD'}).format(number);
