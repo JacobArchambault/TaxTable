@@ -1,5 +1,5 @@
 function displayLiability() {
-    let income = document.querySelector<HTMLInputElement>("#income").valueAsNumber;
+    let income = document.querySelector<HTMLInputElement>("#income")!.valueAsNumber;
     if (lowestBracket(income)) {
         display(asCurrency(lowestLiability(income)));
     }
@@ -50,7 +50,7 @@ function bracketFiveLiability(gross: number) {
     return 93374 + (gross - 297350) * 0.391;
 }
 function display(displayValue: string) {
-    document.querySelector<HTMLInputElement>("#taxable-amount").value = displayValue;
+    document.querySelector<HTMLInputElement>("#taxable-amount")!.value = displayValue;
 }
 function asCurrency(number: number) {
     return new Intl.NumberFormat('en-US', {

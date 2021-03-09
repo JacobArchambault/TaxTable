@@ -3,7 +3,8 @@
       "outDir": "./built",
       "allowJs": false,
       "allowUnreachableCode": false,
-      "noImplicitAny": true
+      "noImplicitAny": true,
+      "strict":true
     },
     "include": ["./src/**/*"]
   }

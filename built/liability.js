@@ -1,3 +1,4 @@
+"use strict";
 function displayLiability() {
     var income = document.querySelector("#income").valueAsNumber;
     if (lowestBracket(income)) {
