@@ -1,6 +1,6 @@
 "use strict";
 function displayLiability() {
-    var income = document.querySelector("#income").valueAsNumber;
+    const income = document.querySelector("#income").valueAsNumber;
     if (lowestBracket(income)) {
         display(asCurrency(lowestLiability(income)));
     }

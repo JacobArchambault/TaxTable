@@ -1,5 +1,5 @@
 function displayLiability() {
-    let income = document.querySelector<HTMLInputElement>("#income")!.valueAsNumber;
+    const income = document.querySelector<HTMLInputElement>("#income")!.valueAsNumber;
     if (lowestBracket(income)) {
         display(asCurrency(lowestLiability(income)));
     }
