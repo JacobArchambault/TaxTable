@@ -1,8 +1,9 @@
 {
     "compilerOptions": {
       "outDir": "./built",
-      "allowJs": true,
-      "target": "es5"
+      "allowJs": false,
+      "allowUnreachableCode": false,
+      "noImplicitAny": true
     },
     "include": ["./src/**/*"]
   }
