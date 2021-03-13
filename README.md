@@ -1,4 +1,4 @@
 # TaxTable
-An HTML and JavaScript application that calculates tax liability from gross income.
+A TypeScript using pure functions to display tax liability from a user's gross income input on a Bootstrap-styled HTML page.
 
 
